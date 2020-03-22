@@ -18,6 +18,7 @@ public class InteractionButton : MonoBehaviour, IInteractable
 
     [SerializeField] protected float colorLerpSpeed;
     private float _lerpValue = 0;
+    private float _baseLightIntensity;
     
     [SerializeField] protected float timeToNextInteraction;
     private float _prevTime;
@@ -25,6 +26,8 @@ public class InteractionButton : MonoBehaviour, IInteractable
     {
         _prevTime = Time.time;
         _light = GetComponentInChildren<Light>();
+        _baseLightIntensity = _light.intensity;
+        _light.intensity = 0f;
         _buttonAnimator = GetComponent<Animator>();
     }
 
@@ -55,7 +58,7 @@ public class InteractionButton : MonoBehaviour, IInteractable
     
     private void ActivateLight()
     {
-        _light.intensity = Mathf.Lerp(_light.intensity, 1.0f, _lerpValue);
+        _light.intensity = Mathf.Lerp(_light.intensity, _baseLightIntensity, _lerpValue);
         _lerpValue += Time.deltaTime * colorLerpSpeed;
         if (_lerpValue >= 1.0f)
         {
