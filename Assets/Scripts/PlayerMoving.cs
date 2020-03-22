@@ -1,10 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
-using System.Runtime.CompilerServices;
-using System.Security.Claims;
 using UnityEngine;
-using UnityEngine.Rendering.HighDefinition;
 
 public class PlayerMoving : MonoBehaviour
 {
