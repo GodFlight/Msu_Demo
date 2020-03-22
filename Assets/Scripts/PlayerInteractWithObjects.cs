@@ -7,11 +7,13 @@ using UnityEngine.EventSystems;
 public class PlayerInteractWithObjects : MonoBehaviour
 {
     private Camera _camera;
+    private Dictionary<int, IInteractable> _cachedComponents = new Dictionary<int, IInteractable>();
+
     void Start()
     {
         _camera = GetComponentInChildren<Camera>();
     }
-    
+
     void Update()
     {
         GetInteraction();
@@ -26,7 +28,24 @@ public class PlayerInteractWithObjects : MonoBehaviour
         {
             GameObject interactiveObject = hitInfo.collider.gameObject;
             if (interactiveObject.CompareTag("Interactive"))
-                interactiveObject.GetComponent<IInteractable>().ShowUsability();
+            {
+                IInteractable button = GetCachedComponent(interactiveObject);
+                button.ShowUsability();
+                if (Input.GetKey(KeyCode.E))
+                    button.Interact();
+            }
         }
+    }
+
+    private IInteractable GetCachedComponent(GameObject interactableObject)
+    {
+        IInteractable interactable;
+        int instanceId = interactableObject.GetInstanceID();
+
+        if (_cachedComponents.TryGetValue(instanceId, out interactable))
+            return interactable;
+        interactable = interactableObject.GetComponent<IInteractable>();
+        _cachedComponents.Add(instanceId, interactable);
+        return interactable;
     }
 }

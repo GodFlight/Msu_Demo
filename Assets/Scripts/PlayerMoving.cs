@@ -8,10 +8,10 @@ using UnityEngine.Rendering.HighDefinition;
 
 public class PlayerMoving : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed;
-    [SerializeField] private float rotateSensHoriz;
-    [SerializeField] private float rotateSensVert;
-    [SerializeField] private float maxVertAngle = 45.0f;
+    [SerializeField] protected float moveSpeed;
+    [SerializeField] protected float rotateSensHoriz;
+    [SerializeField] protected float rotateSensVert;
+    [SerializeField] protected float maxVertAngle = 45.0f;
     
     private Rigidbody _rigidbody;
     private Transform _cameraTransform;
