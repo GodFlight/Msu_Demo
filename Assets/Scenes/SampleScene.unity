@@ -850,8 +850,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44587020eed426da3b193b0f3b12b5ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorAnimator: {fileID: 2136228037}
+  interactionTarget: {fileID: 2136228040}
   colorLerpSpeed: 0.5
+  timeToNextInteraction: 0.5
 --- !u!135 &695010803
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -865,6 +866,25 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 5.75
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &695010804
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 695010800}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: aa4862c959a98eddcabe655c7d1facca, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &751778142
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1586,6 +1606,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Interactive
+      objectReference: {fileID: 0}
+    - target: {fileID: 6323515109638139309, guid: 2b1e652053968d99a96facc3e3da9ca0,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.37850374
+      objectReference: {fileID: 0}
+    - target: {fileID: 6323515109638139309, guid: 2b1e652053968d99a96facc3e3da9ca0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.3640956
+      objectReference: {fileID: 0}
+    - target: {fileID: 6323515109638139309, guid: 2b1e652053968d99a96facc3e3da9ca0,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.024215575
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b1e652053968d99a96facc3e3da9ca0, type: 3}
@@ -2446,3 +2481,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2136228040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2136228036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d47d86877867333f8725dffca420e88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -4,21 +4,22 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Experimental.GlobalIllumination;
+using UnityEngine.Serialization;
 
-public class DoorOpeningButton : MonoBehaviour, IInteractable
+public class InteractionButton : MonoBehaviour, IInteractable
 {
-    [SerializeField] protected Animator doorAnimator;
+    [SerializeField] protected MonoBehaviour interactionTarget;
     private Animator _buttonAnimator;
     
     private Light _light;
     private bool _canBeActivated;
     private bool _deactivateLight;
-    private bool _doorOpened = false;
+    private bool _interactionDone = false;
 
     [SerializeField] protected float colorLerpSpeed;
     private float _lerpValue = 0;
-
-    [SerializeField] protected float timeToNextDoorInteraction;
+    
+    [SerializeField] protected float timeToNextInteraction;
     private float _prevTime;
     void Start()
     {
@@ -38,10 +39,10 @@ public class DoorOpeningButton : MonoBehaviour, IInteractable
     public void Interact()
     {
         float currTime = Time.time;
-        if (currTime - _prevTime > timeToNextDoorInteraction)
+        if (currTime - _prevTime > timeToNextInteraction)
         {
-            _doorOpened = !_doorOpened;
-            doorAnimator.SetBool("OpenDoor", _doorOpened);
+            _interactionDone = !_interactionDone;
+            (interactionTarget as IInteractionTarget)?.HandleInteraction();
             _buttonAnimator.SetTrigger("ButtonPressed");
             _prevTime = currTime;
         }
