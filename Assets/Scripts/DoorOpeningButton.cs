@@ -8,6 +8,7 @@ using UnityEngine.Experimental.GlobalIllumination;
 public class DoorOpeningButton : MonoBehaviour, IInteractable
 {
     [SerializeField] protected Animator doorAnimator;
+    private Animator _buttonAnimator;
     
     private Light _light;
     private bool _canBeActivated;
@@ -23,6 +24,7 @@ public class DoorOpeningButton : MonoBehaviour, IInteractable
     {
         _prevTime = Time.time;
         _light = GetComponentInChildren<Light>();
+        _buttonAnimator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -40,6 +42,7 @@ public class DoorOpeningButton : MonoBehaviour, IInteractable
         {
             _doorOpened = !_doorOpened;
             doorAnimator.SetBool("OpenDoor", _doorOpened);
+            _buttonAnimator.SetTrigger("ButtonPressed");
             _prevTime = currTime;
         }
     }
