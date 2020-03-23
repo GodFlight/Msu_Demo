@@ -3,9 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.Experimental.GlobalIllumination;
 using UnityEngine.Rendering.HighDefinition;
-using UnityEngine.Serialization;
 
 public class InteractionButton : MonoBehaviour, IInteractable
 {
@@ -35,7 +33,6 @@ public class InteractionButton : MonoBehaviour, IInteractable
 
     private void Update()
     {
-        Debug.Log(_light.intensity.ToString());
         if (_canBeActivated)
             ActivateLight();
         else if (_deactivateLight)
