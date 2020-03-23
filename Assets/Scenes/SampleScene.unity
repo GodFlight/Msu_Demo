@@ -428,7 +428,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &128442558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2515,7 +2515,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 869dc6ef9cd6a4bd680d54dde4b52550, type: 2}
+      objectReference: {fileID: 2100000, guid: 66967d4da605971eca0c81eee3f10a9b, type: 2}
     - target: {fileID: -927199367670048503, guid: e12766e2c2d6ae1c8bcf0f680423ccb2,
         type: 3}
       propertyPath: m_Name
@@ -2525,7 +2525,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 869dc6ef9cd6a4bd680d54dde4b52550, type: 2}
+      objectReference: {fileID: 2100000, guid: 66967d4da605971eca0c81eee3f10a9b, type: 2}
     - target: {fileID: 3790740219211191083, guid: e12766e2c2d6ae1c8bcf0f680423ccb2,
         type: 3}
       propertyPath: m_LocalRotation.x
