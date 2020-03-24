@@ -20,11 +20,11 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: HologramMaterial
+  m_Name: TeapotHologramMaterial
   m_Shader: {fileID: -6465566751694194690, guid: 6a86966b8835b87c7b3312e6b890cd48,
     type: 3}
   m_ShaderKeywords: _NORMALMAP_TANGENT_SPACE
-  m_LightmapFlags: 4
+  m_LightmapFlags: 1
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 1
   m_CustomRenderQueue: -1
@@ -161,8 +161,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Vector1_755703A6: 1
-    - Vector1_9E8A1676: 0.2
-    - Vector1_DE77F22B: 4
+    - Vector1_9E8A1676: 7.27
+    - Vector1_DE77F22B: 1
     - Vector1_EFACE905: 2
     - _AORemapMax: 1
     - _AORemapMin: 0
