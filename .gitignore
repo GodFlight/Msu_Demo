@@ -1,3 +1,8 @@
+*.x86_64
+*.debug
+*.so
+msu_demo_Data
+Assets/SpaceSkies Free/
 .idea
 Assets/Laboratory_Pack
 
