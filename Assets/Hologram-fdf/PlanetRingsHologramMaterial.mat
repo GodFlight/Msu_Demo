@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TeapotHologramMaterial
+  m_Name: PlanetRingsHologramMaterial
   m_Shader: {fileID: -6465566751694194690, guid: 6a86966b8835b87c7b3312e6b890cd48,
     type: 3}
   m_ShaderKeywords: _NORMALMAP_TANGENT_SPACE
@@ -161,7 +161,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Vector1_755703A6: 1
-    - Vector1_9E8A1676: 7.27
+    - Vector1_9E8A1676: 11.27
     - Vector1_DE77F22B: 1
     - Vector1_EFACE905: 2
     - _AORemapMax: 1
@@ -295,7 +295,7 @@ Material:
     - _ZTestTransparent: 4
     - _ZWrite: 1
     m_Colors:
-    - Color_75FEBF08: {r: 0.6792453, g: 0.18262723, b: 0.5862241, a: 1}
+    - Color_75FEBF08: {r: 0.032383785, g: 0.9622642, b: 0, a: 1}
     - Color_98737AAD: {r: 0.07974369, g: 0.6037736, b: 0.10053608, a: 0}
     - Color_B0DDAE77: {r: 0.9278402, g: 0.1926316, b: 1.775561, a: 0}
     - _BaseColor: {r: 0.099001415, g: 0.5849056, b: 0.08001066, a: 1}
