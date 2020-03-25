@@ -65,7 +65,7 @@ PrefabInstance:
     - target: {fileID: 8855917101507670681, guid: 9cf561165a72b93418cb200e4cb88734,
         type: 3}
       propertyPath: m_Name
-      value: Tesla Coil Variant
+      value: Tesla Coil with electrivc
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cf561165a72b93418cb200e4cb88734, type: 3}
@@ -82,6 +82,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6009251890771477004}
     m_Modifications:
+    - target: {fileID: 2688226148880899172, guid: eadbdf3b8711c9c409eca90114fb2b23,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688226148880899172, guid: eadbdf3b8711c9c409eca90114fb2b23,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688226148880899172, guid: eadbdf3b8711c9c409eca90114fb2b23,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.362
+      objectReference: {fileID: 0}
     - target: {fileID: 4040281848316446745, guid: eadbdf3b8711c9c409eca90114fb2b23,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -177,6 +192,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[5]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6671134774346957617, guid: eadbdf3b8711c9c409eca90114fb2b23,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eadbdf3b8711c9c409eca90114fb2b23, type: 3}
 --- !u!1001 &4318971915581360449
@@ -186,6 +206,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6009251890771477004}
     m_Modifications:
+    - target: {fileID: 2688226148880899172, guid: eadbdf3b8711c9c409eca90114fb2b23,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688226148880899172, guid: eadbdf3b8711c9c409eca90114fb2b23,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688226148880899172, guid: eadbdf3b8711c9c409eca90114fb2b23,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.362
+      objectReference: {fileID: 0}
     - target: {fileID: 4040281848316446745, guid: eadbdf3b8711c9c409eca90114fb2b23,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -284,6 +319,11 @@ PrefabInstance:
     - target: {fileID: 4040281848316446747, guid: eadbdf3b8711c9c409eca90114fb2b23,
         type: 3}
       propertyPath: m_Materials.Array.data[5]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6671134774346957617, guid: eadbdf3b8711c9c409eca90114fb2b23,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
