@@ -16,7 +16,10 @@ public class DoorsToRoom2Open : MonoBehaviour, IInteractionTarget
     public void HandleInteraction()
     {
         if (!_doorsOpened)
+        {
             StartCoroutine(nameof(OpenDoorsAfterSeconds));
+            _doorsOpened = true;
+        }
     }
 
     public IEnumerator OpenDoorsAfterSeconds()

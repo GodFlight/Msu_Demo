@@ -23,7 +23,7 @@ Material:
   m_Name: ForceFieldMaterial
   m_Shader: {fileID: -6465566751694194690, guid: 0b8886cf86580c7ba8f792925df867a8,
     type: 3}
-  m_ShaderKeywords: BOOLEAN_3F55DA4E_ON _BLENDMODE_ALPHA _SURFACE_TYPE_TRANSPARENT
+  m_ShaderKeywords: _BLENDMODE_ALPHA _SURFACE_TYPE_TRANSPARENT
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -48,14 +48,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - BOOLEAN_3F55DA4E: 1
+    - BOOLEAN_3F55DA4E: 0
     - Vector1_755703A6: 1
     - Vector1_90CEF8AE: 15
     - Vector1_9E8A1676: 3
-    - Vector1_A8719D87: 5
+    - Vector1_A8719D87: 4
     - Vector1_C9E54689: 15
     - Vector1_D1B2DB5A: 10
     - Vector1_DE77F22B: 0
+    - Vector1_E83CFCAF: 0
     - _AlphaCutoffEnable: 0
     - _AlphaDstBlend: 10
     - _AlphaSrcBlend: 1
