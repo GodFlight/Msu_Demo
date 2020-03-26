@@ -73,7 +73,7 @@ LightmapSettings:
     m_FinalGatherRayCount: 256
     m_ReflectionCompression: 0
     m_MixedBakeMode: 0
-    m_BakeBackend: 2
+    m_BakeBackend: 1
     m_PVRSampling: 1
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 300
@@ -6474,7 +6474,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 960718492}
   m_LocalRotation: {x: -0, y: -0.6019146, z: -0, w: 0.79856056}
-  m_LocalPosition: {x: -6.32, y: 0.797, z: 16.43}
+  m_LocalPosition: {x: 1.9, y: 0.88, z: -1.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1682402322}
@@ -6985,7 +6985,7 @@ PrefabInstance:
     - target: {fileID: 2360574, guid: 9eae98c00a1616a4eb4d16b5edd653c3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 964df9ff6740f6d23ace1ac3b44b6685, type: 2}
+      objectReference: {fileID: 2100000, guid: 81dae69d489be5f4c95198c7ca21d0bb, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9eae98c00a1616a4eb4d16b5edd653c3, type: 3}
 --- !u!1 &1033477454
@@ -8817,7 +8817,7 @@ PrefabInstance:
     - target: {fileID: 2391150, guid: c4d9e25f139a62e449023389df4624d1, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 964df9ff6740f6d23ace1ac3b44b6685, type: 2}
+      objectReference: {fileID: 2100000, guid: 81dae69d489be5f4c95198c7ca21d0bb, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4d9e25f139a62e449023389df4624d1, type: 3}
 --- !u!1 &1382821335
