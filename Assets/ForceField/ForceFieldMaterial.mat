@@ -51,8 +51,9 @@ Material:
     - BOOLEAN_3F55DA4E: 0
     - Vector1_755703A6: 1
     - Vector1_90CEF8AE: 15
+    - Vector1_953BB2A8: 5
     - Vector1_9E8A1676: 3
-    - Vector1_A8719D87: 4
+    - Vector1_A8719D87: 2
     - Vector1_C9E54689: 15
     - Vector1_D1B2DB5A: 10
     - Vector1_DE77F22B: 0
@@ -90,11 +91,13 @@ Material:
     - _ZTestTransparent: 4
     - _ZWrite: 1
     m_Colors:
-    - Color_37F34AEF: {r: 0, g: 11.739748, b: 46.672615, a: 1}
-    - Color_64317F10: {r: 76.16924, g: 0, b: 126.50718, a: 0}
+    - Color_37F34AEF: {r: 0, g: 0.38431373, b: 1.4980392, a: 1}
+    - Color_64317F10: {r: 1.8039216, g: 0, b: 2.9960785, a: 0}
     - Color_706AB6F3: {r: 0.764151, g: 0, b: 0.06485266, a: 0}
     - Color_75FEBF08: {r: 0.076094635, g: 0.8490566, b: 0.12046947, a: 0}
     - Color_CC5ADC48: {r: 4.229047, g: 19.18608, b: 42.69324, a: 0}
+    - Vector2_43CD0742: {r: 10, g: 2, b: 0, a: 0}
+    - Vector2_6B434906: {r: 0.5, g: 0.5, b: 0, a: 0}
     - Vector2_E1E201D9: {r: 1, g: 1, b: 0, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
