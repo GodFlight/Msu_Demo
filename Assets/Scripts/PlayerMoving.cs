@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using UnityEngine;
 
+[SelectionBase]
 public class PlayerMoving : MonoBehaviour
 {
     [SerializeField] protected float moveSpeed;
@@ -12,10 +13,14 @@ public class PlayerMoving : MonoBehaviour
     
     private Rigidbody _rigidbody;
     private Transform _cameraTransform;
+
+    private Vector3 _startPosition;
+    
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
         _cameraTransform = GetComponentInChildren<Camera>().GetComponent<Transform>();
+        _startPosition = transform.position;
     }
     
     void Update()
@@ -23,6 +28,8 @@ public class PlayerMoving : MonoBehaviour
         _rigidbody.velocity = GetMovementVector();
         transform.localEulerAngles = GetRotationY();
         _cameraTransform.localEulerAngles = GetRotationX();
+        if (Input.GetKey(KeyCode.B))
+            _rigidbody.position = _startPosition;
     }
 
     private Vector3 GetRotationX()
