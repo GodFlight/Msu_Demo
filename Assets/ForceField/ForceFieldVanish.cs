@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ForceFieldVanish : MonoBehaviour
+public class ForceFieldVanish : MonoBehaviour, IInteractable
 {
     [SerializeField] protected float vanishSpeed;
 
     private bool _isVanishing;
     private Animator _animator;
-
+    
     void Start()
     {
         _animator = GetComponent<Animator>();
@@ -17,10 +17,22 @@ public class ForceFieldVanish : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && !_isVanishing)
+        if (_isVanishing)
         {
             _animator.SetTrigger("Vanish");
-            _isVanishing = true;
+            _isVanishing = false;
         }
+    }
+
+    public void ShowUsability()
+    {
+        // TODO [rkeli] GUI message 
+    }
+
+    public void HideUsability() { }
+
+    public void Interact()
+    {
+        _isVanishing = true;
     }
 }

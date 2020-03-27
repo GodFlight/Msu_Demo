@@ -7,9 +7,9 @@ using UnityEngine.EventSystems;
 public class PlayerInteractWithObjects : MonoBehaviour
 {
     private Camera _camera;
-    private Dictionary<int, IInteractable> _cachedComponents = new Dictionary<int, IInteractable>();
+    private Dictionary<int, List<IInteractable>> _cachedComponents = new Dictionary<int, List<IInteractable>>();
 
-    private IInteractable _lastFrameInteractionObject;
+    private List<IInteractable> _lastFrameInteractionObjects;
     void Start()
     {
         _camera = GetComponentInChildren<Camera>();
@@ -30,29 +30,35 @@ public class PlayerInteractWithObjects : MonoBehaviour
             var interactiveObject = hitInfo.collider.gameObject;
             if (interactiveObject.CompareTag("Interactive"))
             {
-                var interactable = GetCachedComponent(interactiveObject);
-                interactable.ShowUsability();
-                if (Input.GetKey(KeyCode.E))
-                    interactable.Interact();
-                _lastFrameInteractionObject = interactable;
+                var interactables = GetCachedComponents(interactiveObject);
+                foreach (IInteractable interactable in interactables)
+                {
+                    interactable.ShowUsability();
+                    if (Input.GetKey(KeyCode.E))
+                        interactable.Interact();
+                }
+                _lastFrameInteractionObjects = interactables;
             }
-            else if (_lastFrameInteractionObject != null)
+            else if (_lastFrameInteractionObjects != null)
             {
-                _lastFrameInteractionObject.HideUsability();
-                _lastFrameInteractionObject = null;
+                foreach (IInteractable interactable in _lastFrameInteractionObjects)
+                {
+                    interactable.HideUsability();
+                }
+                _lastFrameInteractionObjects = null;
             }
         }
     }
 
-    private IInteractable GetCachedComponent(GameObject interactableObject)
+    private List<IInteractable> GetCachedComponents(GameObject interactableObject)
     {
-        IInteractable interactable;
+        List<IInteractable> interactables;
         int instanceId = interactableObject.GetInstanceID();
-
-        if (_cachedComponents.TryGetValue(instanceId, out interactable))
-            return interactable;
-        interactable = interactableObject.GetComponent<IInteractable>();
-        _cachedComponents.Add(instanceId, interactable);
-        return interactable;
+        
+        if (_cachedComponents.TryGetValue(instanceId, out interactables))
+            return interactables;
+        interactables = new List<IInteractable>(interactableObject.GetComponents<IInteractable>());
+        _cachedComponents.Add(instanceId, interactables);
+        return interactables;
     }
 }
