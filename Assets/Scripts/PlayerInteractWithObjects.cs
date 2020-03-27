@@ -9,6 +9,7 @@ public class PlayerInteractWithObjects : MonoBehaviour
     private Camera _camera;
     private Dictionary<int, IInteractable> _cachedComponents = new Dictionary<int, IInteractable>();
 
+    private IInteractable _lastFrameInteractionObject;
     void Start()
     {
         _camera = GetComponentInChildren<Camera>();
@@ -26,13 +27,19 @@ public class PlayerInteractWithObjects : MonoBehaviour
 
         if (Physics.Raycast(ray, out hitInfo))
         {
-            GameObject interactiveObject = hitInfo.collider.gameObject;
+            var interactiveObject = hitInfo.collider.gameObject;
             if (interactiveObject.CompareTag("Interactive"))
             {
-                IInteractable button = GetCachedComponent(interactiveObject);
-                button.ShowUsability();
+                var interactable = GetCachedComponent(interactiveObject);
+                interactable.ShowUsability();
                 if (Input.GetKey(KeyCode.E))
-                    button.Interact();
+                    interactable.Interact();
+                _lastFrameInteractionObject = interactable;
+            }
+            else if (_lastFrameInteractionObject != null)
+            {
+                _lastFrameInteractionObject.HideUsability();
+                _lastFrameInteractionObject = null;
             }
         }
     }
