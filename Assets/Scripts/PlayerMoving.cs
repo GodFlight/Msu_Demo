@@ -15,7 +15,7 @@ public class PlayerMoving : MonoBehaviour
     private Transform _cameraTransform;
 
     private Vector3 _startPosition;
-    
+
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
