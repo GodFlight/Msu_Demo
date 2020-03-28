@@ -8,22 +8,20 @@ public class PlayerStepsSoundPlayer : MonoBehaviour
 {
     private AudioSource _audioSource;
     private Rigidbody _rigidbody;
+    
     void Start()
     {
-        _audioSource = GetComponentInChildren<AudioSource>();
-        _rigidbody = GetComponent<Rigidbody>();
+        _audioSource = GetComponent<AudioSource>();
+        _rigidbody = GetComponentInParent<Rigidbody>();
+        _audioSource.Play();
+        _audioSource.Pause();
     }
 
     private void Update()
     {
-        // Debug.Log(_rigidbody.velocity.ToString());
-        // Debug.Log(_audioSource.isPlaying.ToString());
         if (_rigidbody.velocity != Vector3.zero && !_audioSource.isPlaying)
-        {
-            _audioSource.Play();
-            // Debug.Log("playing steps sound!");
-        }
-        else if (_rigidbody.velocity != Vector3.zero && _audioSource.isPlaying)
-            _audioSource.Stop();
+            _audioSource.UnPause();
+        else if (_rigidbody.velocity == Vector3.zero && _audioSource.isPlaying)
+            _audioSource.Pause();
     }
 }
