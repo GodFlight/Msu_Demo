@@ -1069,6 +1069,12 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0.16
   m_ShadowAngle: 0
+--- !u!1 &86586735 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 601123807245090338, guid: 3abfe24021ed9d646984b1c0deb3861b,
+    type: 3}
+  m_PrefabInstance: {fileID: 8896425643778985379}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &88447370
 GameObject:
   m_ObjectHideFlags: 0
@@ -7066,7 +7072,8 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 6.17997
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7984731966863476096, guid: 817fdaf13f44d824ab982797eacdb3e1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 817fdaf13f44d824ab982797eacdb3e1, type: 3}
 --- !u!224 &645628589 stripped
 RectTransform:
@@ -8471,6 +8478,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba5d6bf46d01c404d8bdd84a5b4a6733, type: 3}
+--- !u!1 &757151267 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7984731966863476103, guid: 817fdaf13f44d824ab982797eacdb3e1,
+    type: 3}
+  m_PrefabInstance: {fileID: 645628588}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &757151268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757151267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c09d82b94c41ec48930fffbcd83caf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &770696403
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9420,7 +9445,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 960718492}
   m_LocalRotation: {x: -0, y: -0.70674366, z: -0, w: 0.7074698}
-  m_LocalPosition: {x: -6.28, y: 0.88, z: 15.45}
+  m_LocalPosition: {x: -0.21, y: 0.88, z: -2.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1682402322}
@@ -18988,6 +19013,11 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 24.82
       objectReference: {fileID: 0}
+    - target: {fileID: 7984731966863476096, guid: 817fdaf13f44d824ab982797eacdb3e1,
+        type: 3}
+      propertyPath: _interactionButton
+      value: 
+      objectReference: {fileID: 86586735}
     - target: {fileID: 7984731966863476100, guid: 817fdaf13f44d824ab982797eacdb3e1,
         type: 3}
       propertyPath: m_LocalPosition.x

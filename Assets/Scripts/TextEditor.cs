@@ -5,7 +5,6 @@ using TMPro;
 public class TextEditor : MonoBehaviour, IInteractable
 {
     [SerializeField] protected float timeToNextInteraction;
-    [SerializeField] private GameObject _textObj;
     private TextMeshProUGUI text;
 
     private bool _interactVisisble;
@@ -33,7 +32,7 @@ public class TextEditor : MonoBehaviour, IInteractable
     {
         _interactVisisble = false;
         _prevTime = Time.time; 
-        text = _textObj.GetComponent<TextMeshProUGUI>();
+        text = GetComponentInChildren<TextMeshProUGUI>();
         text.alpha = 0f;
     }
 

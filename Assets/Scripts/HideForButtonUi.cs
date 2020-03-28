@@ -4,14 +4,11 @@ using UnityEngine;
 
 public class HideForButtonUi : MonoBehaviour
 {
-
-    [SerializeField] private GameObject _interactionButton;
-
     private InteractionButton button;
     
     void Start()
     {
-        button = _interactionButton.GetComponent<InteractionButton>();
+        button = GetComponentInParent<InteractionButton>();
     }
 
     void Update()
