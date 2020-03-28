@@ -10,6 +10,8 @@ public class InteractionButton : MonoBehaviour, IInteractable
     [SerializeField] protected MonoBehaviour interactionTarget;
     private Animator _buttonAnimator;
 
+    [SerializeField] private bool _isPressed;
+
     [SerializeField] protected float lightEnableSpeed;
     [SerializeField] protected float lightDisableSpeed;
 
@@ -17,6 +19,7 @@ public class InteractionButton : MonoBehaviour, IInteractable
     private float _prevTime;
     void Start()
     {
+        _isPressed = false;
         _prevTime = Time.time;
         _buttonAnimator = GetComponent<Animator>();
     }
@@ -29,6 +32,7 @@ public class InteractionButton : MonoBehaviour, IInteractable
             return;
         (interactionTarget as IInteractionTarget)?.HandleInteraction();
         _buttonAnimator.SetTrigger("ButtonPressed");
+        _isPressed = true;
         _prevTime = currTime;
     }
 
@@ -41,4 +45,10 @@ public class InteractionButton : MonoBehaviour, IInteractable
     {
         _buttonAnimator.SetBool("Button Visiable", false);
     }
+
+    public bool GetButtonState()
+    {
+        return _isPressed;
+    }
+
 }

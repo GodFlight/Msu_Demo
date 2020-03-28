@@ -26,13 +26,21 @@ public class ForceFieldVanish : MonoBehaviour, IInteractable
 
     public void ShowUsability()
     {
-        // TODO [rkeli] GUI message 
+        //_interactVisisble = true;
     }
 
-    public void HideUsability() { }
+    public void HideUsability()
+    {
+        //_interactVisisble = false;
+    }
 
     public void Interact()
     {
         _isVanishing = true;
+    }
+
+    public bool GetForceFieldState()
+    {
+        return _isVanishing;
     }
 }
