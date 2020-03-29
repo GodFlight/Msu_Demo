@@ -238,7 +238,7 @@ Material:
     - _ZTestTransparent: 4
     - _ZWrite: 1
     m_Colors:
-    - Color_75FEBF08: {r: 0, g: 0.45371625, b: 15.999998, a: 0}
+    - Color_75FEBF08: {r: 0, g: 1.310947, b: 41.73181, a: 0}
     - Vector3_2E61E3EB: {r: 0, g: 0, b: 0, a: 0}
     - Vector3_342D6CE2: {r: 0, g: 0, b: 0, a: 0}
     - Vector3_973F3C29: {r: 0, g: 0, b: 0, a: 0}

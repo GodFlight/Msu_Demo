@@ -167,7 +167,6 @@ GameObject:
   - component: {fileID: 7984731966863476099}
   - component: {fileID: 7984731966863476098}
   - component: {fileID: 7984731966863476101}
-  - component: {fileID: 7984731966863476096}
   - component: {fileID: 7984731966863476097}
   - component: {fileID: 7984731966863476110}
   m_Layer: 5
@@ -257,19 +256,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &7984731966863476096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7984731966863476103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 096604c2a5cf64a49a603d4ae28b5f5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _interactionButton: {fileID: 0}
 --- !u!114 &7984731966863476097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -283,7 +269,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToNextInteraction: 0
-  _textObj: {fileID: 7984731966324800437}
 --- !u!65 &7984731966863476110
 BoxCollider:
   m_ObjectHideFlags: 0
