@@ -7,6 +7,8 @@ public class ForceFieldVanish : MonoBehaviour, IInteractable
     [SerializeField] protected float vanishSpeed;
 
     private bool _isVanishing;
+    private bool _isVanished;
+    
     private Animator _animator;
     
     void Start()
@@ -21,6 +23,7 @@ public class ForceFieldVanish : MonoBehaviour, IInteractable
         {
             _animator.SetTrigger("Vanish");
             _isVanishing = false;
+            _isVanished = true;
         }
     }
 
@@ -41,6 +44,6 @@ public class ForceFieldVanish : MonoBehaviour, IInteractable
 
     public bool GetForceFieldState()
     {
-        return _isVanishing;
+        return _isVanished;
     }
 }
